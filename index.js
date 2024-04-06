@@ -13,41 +13,58 @@ const questions = [
     "What is your username?",
     "What is your email?", 
 ];
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     inquirer
         .prompt([
             {
-            type: 'input',
-            name: 'name',
-            message: 'What is your name?',
+                type: 'input',
+                name: 'title',
+                message: `${questions[0]}`,
             },
             {
-            type: 'checkbox',
-            message: 'What languages do you know?',
-            name: 'stack',
-            choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+                type: 'input',
+                name: 'describe',
+                message: `${questions[1]}`,
+            },           
+            {
+                type: 'input',
+                name: 'installation',
+                message: `${questions[2]}`,
             },
             {
-            type: 'list',
-            message: 'What is your preferred method of communication?',
-            name: 'contact',
-            choices: ['email', 'phone', 'telekinesis'],
+                type: 'input',
+                name: 'contribution',
+                message: `${questions[3]}`,
             },
-        ])
-        .then((data) => {
-            console.log(data)
-            const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-            fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-            err ? console.log(err) : console.log('Success!')
-            );
-        });
+            {
+                type: 'input',
+                name: 'testing',
+                message: `${questions[4]}`,
+            },
+            {
+                type: 'list',
+                name: 'license',
+                message: `${questions[5]}`,
+                choices: ['MIT', 'Microsoft Public License', 'Mozilla Public License 2.0', 'Open Software License 3.0', 'GNU General Public License v3.0'], 
+            },
+            {
+                type: 'input',
+                name: 'username',
+                message: `${questions[6]}`,
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: `${questions[7]}`,
+            },
+        ]);
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    writeToFile();
+}
 
 // Function call to initialize app
 init();
