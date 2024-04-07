@@ -52,7 +52,7 @@ async function writeToFile(fileName) {
             type: 'list', 
             name: 'license',
             message: `${questions[6]}`,
-            choices: ['MIT', 'Microsoft Public License', 'Mozilla Public License 2.0', 'Open Software License 3.0', 'GNU General Public License v3.0'] 
+            choices: ['none','MIT', 'Open Database License', 'Mozilla Public License 2.0', 'GNU Affero General Public License 3.0'] 
         },
         { 
             type: 'input', 
@@ -66,11 +66,6 @@ async function writeToFile(fileName) {
         }
     ]);
     const data = generateMarkdown.generateMarkdown(answers);
-
-
-
-
-    
 
     try {
         await fs.writeFile(fileName, data, 'utf8');
