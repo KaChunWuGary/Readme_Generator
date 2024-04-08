@@ -47,19 +47,18 @@ function generateMarkdown(answers) {
           \n${badge}
           \n## Description\n${answers.describe} 
           \n## Table of Contents
-          \n\t[Installation](#l_installation)
-          \n\t[Usage](#l_usage)
-          \n\t[License](#l_license)
-          \n\t[Contribution](#l_contribution)
-          \n\t[Testing](#l_testing)
-          \n\t[Questions](#l_questions)
+          \n[Installation](#l_installation)
+          \n[Usage](#l_usage)
+          \n[License](#l_license)
+          \n[Contribution](#l_contribution)
+          \n[Testing](#l_testing)
+          \n[Questions](#l_questions)
           \n## Installation <a id='l_installation'></a>\n${answers.installation}
           \n## Usage <a id='l_usage'></a>\n${answers.usage}
-          \n## license <a id='l_license'></a>
-          \nAll code and assets used are under the ${answers.license} and open to the public domain unless specified otherwise.
+          \n## License <a id='l_license'></a>
+          \nAll code and assets used are under the ${badge} and open to the public domain unless specified otherwise.
           \n## Contribution <a id='l_contribution'></a>\n${answers.contribution}
           \n## Testing <a id='l_testing'></a>\n${answers.testing}
-
           \n## Questions <a id='l_questions'></a>
           \nUsername:${answers.username}
           \n[Link to Github](https://github.com/${answers.username})
